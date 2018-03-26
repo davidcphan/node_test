@@ -4,7 +4,8 @@ const router = require('./routes/router.js');
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/css'))
+app.use(express.static(__dirname + '/css'));
+app.use('/', express.static('public'));
 
 var userData = require('./models/db.js');
 // set the view engine to ejs
