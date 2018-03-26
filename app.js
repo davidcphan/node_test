@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const router = require('./routes/router.js');
 
+const PORT = process.env.PORT || 3000;
+
+
+
 var userData = require('./models/db.js');
 // set the view engine to ejs
 app.set('view engine', 'ejs')
@@ -18,6 +22,10 @@ app.get('/users', router);
 //displays user with specific id using req.params
 app.get('/users/:id', router);
 
-app.listen(3000, function(){
+/*app.listen(3000, function(){
 console.log('Express serving at port 3000');
+});*/
+
+app.listen(PORT, function(){
+console.log(`Express listening on port ${PORT}`);
 });

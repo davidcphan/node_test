@@ -12,10 +12,4 @@ router.route('/users/:id').get(controller.userFind);
 
 
 
-
-
-
-
-
-
 module.exports = router;
