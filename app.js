@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const router = require('./routes/router.js');
 
 var userData = require('./models/db.js');
 // set the view engine to ejs
@@ -9,20 +10,16 @@ app.get('/ejstest', function(req,res){
   res.render('user_data.ejs', {userData});
 });
 
+app.get('/bye', router);
+
 
 app.get('/', function(req,res){
 res.send("Hello World");
 });
 
-app.get('/bye', function(req,res){
-res.send("Goodbye world");
-});
 
 app.get('/david', function(req, res){
-
 res.send("Hey mate, you've successfuly created a route for /david");
-
-
 });
 
 //displays all users
