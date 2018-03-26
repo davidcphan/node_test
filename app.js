@@ -4,7 +4,7 @@ const router = require('./routes/router.js');
 
 const PORT = process.env.PORT || 3000;
 
-
+app.use(express.static(__dirname + '/css'))
 
 var userData = require('./models/db.js');
 // set the view engine to ejs
@@ -13,7 +13,6 @@ app.set('view engine', 'ejs')
 
 
 app.get('/bye', router);
-app.get('/ejstest', router);
 app.get('/', router);
 
 //displays all users

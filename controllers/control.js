@@ -1,14 +1,20 @@
 const userData = require('../models/db.js');
 
 module.exports = {
-  
+
       bye: function(req, res) {
           res.send("Goodbye World");
       },
 
-      userDisplay: function(req, res) {
+      comingSoon: function(req, res) {
 
-          res.render('user_data.ejs', {userData});
+          res.render('index.ejs', {userData});
+
+      },
+      
+      showUsers: function(req, res) {
+
+          res.render('users.ejs', {userData});
 
       },
 

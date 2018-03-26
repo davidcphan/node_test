@@ -4,9 +4,8 @@ var controller = require('../controllers/control.js');
 
 
 router.route('/bye').get(controller.bye);
-router.route('/ejstest').get(controller.userDisplay);
-router.route('/').get(controller.helloWorld);
-router.route('/users').get(controller.users);
+router.route('/').get(controller.comingSoon);
+router.route('/users').get(controller.showUsers);
 router.route('/users/:id').get(controller.userFind);
 
 

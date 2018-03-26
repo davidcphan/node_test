@@ -9,7 +9,7 @@ var randomCard = faker.helpers.createCard(); // random contact card containing m
 var userArray = function(){
 
   var uArray = [];
-  for(i =0; i < 5; i++){
+  for(i =0; i < 100; i++){
 
     uArray.push(
       {
